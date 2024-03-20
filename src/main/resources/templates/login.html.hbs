@@ -1,0 +1,80 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/login-design.css">
+    <title>Nuestra App - Login</title>
+</head>
+<body>
+<div><h4><a class="back-button" href="/home"> << Back </a></h4></div>
+
+<section>
+    <div class="background"></div>
+    <form action="/login" method="POST" class="form-info">
+        <div>
+
+            <h3>Login Here</h3>
+        </div>
+
+        {{#if login_fail}}
+        <h5><span style="color:Tomato;">Error</span>: El nombre de usuario o contraseña no coinciden con un usuario registrado</h5>
+        {{/if}}
+
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Email" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Password" id="password">
+
+        <form action="/me" class="input-button">
+            <input type="submit" class="input-button" value="Ingresar" />
+            <h5>Si no estas registrado podes hacerlo en el boton que aparece debajo</h5>
+            <form action="/usuarios" class="boton" method="get">
+                <button ><a class="boton" href="/usuarios/nuevo">Registrarse</a></button>
+            </form>
+        </form>
+    </form>
+</section>
+</body>
+<footer>
+  	<div>@Copyright NombreApp</div>
+  </footer>
+</html>
+<!--{{# partial "titulo" }}
+    <title>NombreApp - Login</title>
+{{/partial}}
+
+{{# partial "contenido" }}-->
+<!--
+    <lu>
+    {{#personas}}
+        <li>    {{mail}} - {{password}}</li>
+    {{/personas}}
+    </lu>
+-->
+<!--    <section >
+    <div class="contenedorFormulario">
+        <section class="formulario">
+            <h2>Crea tu usuario </h2>
+                <form class="formulario-input" action="/login" method="POST">
+                    <div class="campo-input">
+                        <span class="campo">Usuario</span><input type="text" name="username" placeholder="Ingrese nombre de usuario">
+                    </div>
+                    <div class="campo-input">
+                        <span class="campo">Contrasenia</span><input type="password" name="password">
+                    </div>
+                    <div>
+                        <input type="submit" value="Ingresar">
+                    </div>
+
+                </form>
+        <section>
+        <h4>Si todavia no estas registrade, podes hacerlo en el boton de aqui </h4>
+        <form action="/usuarios/nuevo">
+            <input type="submit" value="Registrarse" />
+        </form>
+    </div>
+
+    </section>
+{{/partial}}
+
+{{> layout-logged-out.html.hbs }}
+-->

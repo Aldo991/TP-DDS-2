@@ -1,0 +1,46 @@
+{{# partial "titulo" }}
+    <title>NombreApp - Registrar comunidad</title>
+{{/partial}}
+
+{{# partial "contenido" }}
+    <section>
+    <div>
+        <h4 ><a class="back-button" href="/comunidades"> Back </a></h4>
+    </div>
+    <form action="/comunidades/nuevo" method="POST">
+        <h2>Nueva Comunidades</h2>
+
+        <div>
+            <span class="campo-formulario">Nombre de la comunidad</span>
+            <input type="text" name="nombreComunidad" />
+        </div>
+
+        <h5> elejir miembros para esa comunidad</h5>
+        <select name="elejirMiembros" multiple>
+            {{#each miembros}}
+                <option value="{{id}}">{{nombre}} {{apellido}}</option>
+            {{/each}}
+        </select>
+
+        <h5> elejir administradores para esa comunidad</h5>
+        <select name="elejirAdministradores" multiple>
+            {{#each administradores}}
+                <option value="{{id}}">{{nombre}} {{apellido}}</option>
+            {{/each}}
+        </select>
+
+        <div>
+            <input style="float:right" class="input-button" type="submit" value="Registrar Comunidad">
+        </div>
+
+ </select>
+
+    </form>
+    </section>
+{{/partial}}
+
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}

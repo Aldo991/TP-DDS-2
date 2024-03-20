@@ -1,0 +1,32 @@
+[
+  {
+    "nombreEmpresa": "La colchoneta SRL",
+    "tipoDeEmpresa": "ENTIDAD_PRESTADORA",
+    "mail": "lacolchoneta@gmail.com"
+  },
+  {
+    "nombreEmpresa": "ministerio publico fiscal",
+    "tipoDeEmpresa": "ORGANISMO_DE_CONTROL",
+    "mail": "ministeriopublicofiscal@gmail.com"
+  },
+  {
+    "nombreEmpresa": "Envio expres EyE",
+    "tipoDeEmpresa": "ENTIDAD_PRESTADORA",
+    "mail": "envioexpreseye@gmail.com"
+  },
+  {
+    "nombreEmpresa": "Algeria turistica",
+    "tipoDeEmpresa": "ENTIDAD_PRESTADORA",
+    "mail": "algeriaturistica@gamil.com"
+  },
+  {
+    "nombreEmpresa": "Coca cola",
+    "tipoDeEmpresa": "ENTIDAD_PRESTADORA",
+    "mail": "contactoar@cocacola.com"
+  },
+  {
+    "nombreEmpresa": "Ministerio publico de la defensa",
+    "tipoDeEmpresa": "ORGANISMO_DE_CONTROL",
+    "mail": "ministeriopublicodeladefensa@gmail.com"
+  }
+]

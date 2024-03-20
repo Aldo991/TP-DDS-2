@@ -1,0 +1,37 @@
+{{# partial "titulo" }}
+    <title>NombreApp - Registrarse</title>
+{{/partial}}
+
+{{# partial "contenido" }}
+    <div><h4 ><a class="back-button" href="/home"> Back </a></h4></div>
+    <section>
+        <h2>Información de Usuario</h2>
+        {{#user}}
+            <div class="campo">
+                <span>Nombre: {{nombre}}</span>
+            </div>
+            <div class="campo">
+                <span>Apellido: {{apellido}}</span>
+            </div>
+        <div class="campo">
+            <span>Fecha de Nacimiento: {{fechaDeNacimiento}}</span>
+        </div>
+        <div class="campo">
+            <span>Mail : {{mail}}</span>
+        </div>
+        <div class="campo">
+            <span>Contrasenia: ****</span>
+        </div>
+
+        {{/user}}
+
+        <form class="little-button" action="/usuarios/nuevo">
+            <input type="submit" value="Editar">
+        </form>
+        <form class="little-button" action="/usuario" method="POST">
+            <input type="submit" value="Cerrar Sesion">
+        </form>
+    </section>
+{{/partial}}
+
+{{> layout-logged-on.html.hbs }}

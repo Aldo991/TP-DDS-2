@@ -1,0 +1,39 @@
+{{#partial "contenido"}}
+
+    <h1> Hola a Todos!</h1>
+
+    <h3>Estos son los últimos incidentes reportados!</h3>
+
+    <ul>
+        {{#each incidentes}}
+            <li>
+                    {{#servicio}}
+                        {{nombre}}:
+                    {{/servicio}}
+                    {{observaciones}}
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+
+    {{#if ranking}}
+    <h3>Estos son nuestras entidades con más incidentes!</h3>
+    <div>
+        <div class="chart">
+            {{#ranking}}  <!-- Cada elemento ranking tiene una entidad y un valor -->
+                <div class="bar" style="width: {{porcentaje}}%;">
+                    {{#entidad}}
+                        <span class="chart-label">{{nombreEntidad}}</span> <!-- El nombre de la entidad -->
+                    {{/entidad}}
+                </div>
+            {{/ranking}}
+        </div>
+    </div>
+    {{/if}}
+
+{{/partial}}
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}

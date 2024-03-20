@@ -1,0 +1,20 @@
+{{#partial "titulo" }}
+    Bienvenido Ingresaste
+{{/partial}}
+
+{{#partial "contenido"}}
+
+    <h1> Hola a Todos!</h1>
+
+    <ul>
+        <li>Mostar</li>
+        <li>Incidentes</li>
+        <li>Agrupados por Entidad</li>
+    </ul>
+{{/partial}}
+
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}

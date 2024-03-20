@@ -1,0 +1,39 @@
+{{# partial "titulo" }}
+    <title>NombreApp - Registrar Incidente</title>
+{{/partial}}
+
+{{# partial "contenido" }}
+    <section>
+        <div><h4><a class="back-button" href="/home"> << Back </a></h4></div>
+        <form class="form-info" action="/incidentes" method="POST">
+            <h2>Nuevo Incidente</h2>
+            <div>
+                 <span class="campo-formulario">Servicio  <!--<input type="text" name="servicio">-->
+                <select id="servicio" name="servicio">
+                {{#servicios}}
+                    <option value="{{id}}">{{nombre}}</option>
+                {{/servicios}}
+                </select>
+                 </span>
+
+            </div>
+            <div>
+                <span class="campo-formulario">Fecha</span>
+                <input type="date" id="fecha"/>
+            </div>
+            <div>
+                <span class="campo-formulario">Observaciones</span>
+                <input class="obs" type="text" name="observaciones">
+            </div>
+            <div>
+                <input style="float:right" class="input-button" type="submit" value="Registrar Incidente">
+            </div>
+        </form>
+    </section>
+{{/partial}}
+
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}

@@ -1,0 +1,82 @@
+{{!-- {{# partial "titulo" }} --}}
+{{!--     <title>NombreApp - Registrarse</title> --}}
+{{!-- {{/partial}} --}}
+
+{{!-- {{# partial "contenido" }} --}}
+{{!--     <div class="contenedorFormulario"> --}}
+{{!--         <section class="formulario"> --}}
+{{!--             <h2>Crea tu usuario </h2> --}}
+{{!--             <form class="formulario-input" action="/usuarios" method="POST"> --}}
+{{!--                 <div class="campo-input"> --}}
+{{!--                     <span>Nombre</span> --}}
+{{!--                     <input type="text" name="nombre"> --}}
+{{!--                 </div> --}}
+{{!--                 <div class="campo-input"> --}}
+{{!--                     <span>Apellido</span> --}}
+{{!--                     <input type="text" name="apellido"> --}}
+{{!--                 </div> --}}
+{{!--                 <div class="campo-input"> --}}
+{{!--                     <span>Fecha de Nacimiento</span> --}}
+{{!--                     <input type="date" id="nacimiento"/> --}}
+{{!--                 </div> --}}
+{{!--                 <div class="campo-input"> --}}
+{{!--                     <span>Mail</span> --}}
+{{!--                     <input type="mail" name="mail" placeholder="example@mail.com"> --}}
+{{!--                 </div> --}}
+{{!--                 <div class="campo-input"> --}}
+{{!--                     <span>Contrasenia</span> --}}
+{{!--                     <input type="password" name="password" placeholder="****************"> --}}
+{{!--                 </div> --}}
+{{!--                 <div class="campo-input-btn"> --}}
+{{!--                      <input type="submit" value="Registrarse"> --}}
+{{!--                 </div> --}}
+{{!--             </form> --}}
+{{!--         </section> --}}
+{{!--         <!--<div class="imagen-formulario"> --}}
+{{!--             <img src="/sin-rostro.png" alt="yo puse aqui mi logo"> --}}
+{{!--         </div> --> --}}
+{{!--     </div> --}}
+{{!-- {{/partial}} --}}
+
+{{!-- {{> layout-logged-out.html.hbs }} --}}
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/login-design.css">
+    <title>NombreApp - Registrarse</title>
+</head>
+<body>
+<div><h4><a class="back-button" href="/home"> Back </a></h4></div>
+<section>
+    <div class="background"></div>
+    <form action="/usuarios" class="formulario-registro" method="POST">
+        <h3>Crear usuario</h3>
+
+        {{#if signup_fail}}
+            <h5><span style="color:Tomato;">Error</span>: {{signup_fail}}</h5>
+        {{/if}}
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="nacimiento" id="nacimiento">
+
+        <label for="username">Mail</label>
+        <input type="mail" name="mail" placeholder="example@mail.com" id="nacimiento">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="****************">
+
+        <form action="/me" class="input-button">
+            <input type="submit" class="input-button" value="Registrarse">
+        </form>
+    </form>
+</section>
+</body>
+<footer>
+  	<div>@Copyright NombreApp</div>
+  </footer>
+</html>

@@ -1,0 +1,25 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+    <title>Nuestra App - {{seccion}}</title>
+  {{# block "titulo" }}
+  {{/block}}
+</head>
+
+<body>
+    <div class="header"><h1 class="titulo-ppal">NOMBRE APP</h1></div>
+  <div class="navbar">
+    <a href="/home">Home</a>
+    <a style="float:right" class="active" href="/login">Log In</a>
+  </div>
+  <main>
+    {{# block "contenido" }}
+    {{/block}}
+  </main>
+  <footer>
+  	<div>@Copyright NombreApp</div>
+  </footer>
+</body>
+
+</html>

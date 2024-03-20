@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+    <title>Nuestra App - {{seccion}}</title>
+  {{# block "titulo" }}
+  {{/block}}
+</head>
+
+<body>
+  <div class="header"><h1 class="titulo-ppal">NOMBRE APP</h1></div>
+  <div class="navbar">
+    <a href="/home">Home</a>
+    <a href="/incidentes">Incidentes</a>
+    <a href="/sugerencias">Sugerencias</a>
+    <a href="/rankings">Rankings</a>
+    <a href="/comunidades">Comunidades</a>
+      <a style="float:right" class="active" href="/me">{{usuario}}</a>
+  </div>
+  <main>
+    {{# block "contenido" }}
+    {{/block}}
+  </main>
+  <footer>
+    Copyright NombreApp
+  </footer>
+</body>
+
+</html>

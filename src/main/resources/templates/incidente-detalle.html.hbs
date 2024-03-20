@@ -1,0 +1,24 @@
+{{# partial "contenido" }}
+<div><h4><a class="back-button" href="/incidentes"> << Back </a></h4></div>
+ <section>
+     {{#incidente}}
+     <div>
+         {{#servicio}}
+         <span>Servicio:</span><span>{{nombre}}</span>
+         {{/servicio}}
+     </div>
+     <div>
+         <span>Fecha de apertura:</span><span>{{fechaApertura}}</span>
+     </div>
+     <div>
+         <span>Observaciones:</span><span>{{observaciones}}</span>
+     </div>
+     {{/incidente}}
+ </section>
+{{/partial}}
+
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}

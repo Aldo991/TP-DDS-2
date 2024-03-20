@@ -1,0 +1,149 @@
+      *,
+*:before,
+*:after{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #76b2e8;
+}
+h4{
+  border: 10px;
+}
+.titulo-ppal{
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    top:25%;
+    position: relative;
+    -webkit-text-stroke: 1px #120e0e;
+    color: #193157;
+    font-size: 45px;
+    font-weight: 800;
+}
+main{
+  padding: 10px;
+}
+
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.boton{
+    width: 100%;
+    text-decoration: none;
+    background-color: #113f67;
+    color: #a2a8d3;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+label{
+    color: #76b2e8;
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+h5{
+margin-top: 15px;
+margin-button: 5px
+}
+.input-button{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #113f67;
+    color: #76b2e8;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.formulario-registro{
+   height: 740px;
+    width: 400px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+.back-button{
+text-decoration: none;
+text-align: left,
+text-decoration: none;
+position: relative;
+font-color: #38598b;
+font-family: 'Poppins',sans-serif;
+font-size: 18px;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #113f67;
+    color: #76b2e8;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form{
+    height: 580px;
+    width: 400px;
+    background-color: #76b2e8 /*rgba(255,255,255,0.13)*/;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #113f67;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    color: #113f67;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    color: #76b2e8;
+    background-color: #113f67 /*rgba(255,255,255,0.07)*/;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: none;
+}
+::placeholder{
+    color: #76b2e8;
+}
+footer{
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+}

@@ -1,0 +1,14 @@
+{{#partial "contenido"}}
+<div><h4 ><a class="back-button" href="/home"> Back </a></h4></div>
+    <h1> Los usuarios </h1>
+
+    <ul>
+        {{#each personas}}
+            <li> {{nombre}} {{apellido}} {{mail}} </li>
+        {{/each}}
+    </ul>
+
+{{/partial}}
+
+
+{{> layout-logged-on.html.hbs }}

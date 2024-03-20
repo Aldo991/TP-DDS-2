@@ -1,0 +1,28 @@
+{{#partial "contenido"}}
+<h4 class="back-button"><a class="back-button" href="/home"> << Back </a></h4>
+    <h1> Incidentes Registrados </h1>
+    <ul>
+        {{#each incidentes}}
+            <li>
+            <a href="incidentes/{{id}}">
+            {{#servicio}}
+                {{tipoDeServicio}}: {{nombre}}
+            {{/servicio}}
+                    - {{observaciones}}
+            </a>
+            </li>
+        {{/each}}
+    </ul>
+
+    <dic>
+        <form class="input-boton" action="/incidentes/nuevo" method="get">
+            <button>Registrar Incidente</button>
+        </form>
+    </dic>
+{{/partial}}
+
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}

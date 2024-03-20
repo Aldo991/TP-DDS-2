@@ -1,0 +1,40 @@
+{{#partial "contenido"}}
+<div><h4><a class="back-button" href="/home"> << Back </a></h4></div>
+    <h1> Rankings</h1>
+    <H3>Elegir criterio</H3>
+
+    <form class="form-criterios" action="/rankings" method="GET">
+        <div>
+         <span>Criterio</span>
+        </div>
+        <div>
+        <select id="criterio" name="criterio">
+                        <option value="cantidad">Cantidad de incidentes regitrados</option>
+                        <option value="tiempo">Tiempo de resolucion</option>
+        </select>
+        <input class="campo-input" style="float:right" type="submit" value="Elegir criterio">
+        </div>
+    </form>
+
+    {{#if resultadoRanking}} <!-- el Resultado es una lista de ElemenoRanking's -->
+    <div class="chart">
+        {{#resultadoRanking}}  <!-- Cada elemento ranking tiene una entidad y un valor -->
+        <div class="bar" style="width: {{porcentaje}}%;">
+            {{#entidad}}
+                <span class="chart-label">{{nombreEntidad}}</span> <!-- El nombre de la entidad -->
+            {{/entidad}}
+        </div>
+        {{/resultadoRanking}}
+    </div>
+        <lu>
+
+        </lu>
+    {{/if}}
+
+{{/partial}}
+
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}

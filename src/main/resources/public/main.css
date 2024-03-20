@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.header{
+    background-image: url('mapa.png');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 120px;
+    }
+body {
+  font-family: 'Poppins',sans-serif;
+  margin: 0;
+  background-color: #76b2e8;
+}
+main{
+  padding: 10px;
+  }
+.little-button{
+    margin-top: 10px;
+    background-color: #38598b;
+    color: #e5e5e5;
+    width: 150px;
+    position: left;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.titulo-ppal{
+    text-align: center;
+    font-family:  Courier,monospace;
+    top:25%;
+    position: relative;
+    -webkit-text-stroke: 0.5px #efe7e7;
+    color: #193157;
+    font-size: 60px;
+    font-weight: bold;
+}
+.back-button{
+text-decoration: none;
+text-align: left,
+text-decoration: none;
+position: relative;
+font-color: #38598b;
+font-family: 'Poppins',sans-serif;
+font-size: 18px;
+}
+.input-button{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #38598b;
+    color: #e5e5e5;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.form-criterios{
+    margin: 0;
+    background-color: #76b2e8;
+}
+section {
+  margin-top: 9px;
+}
+.formulario-input{
+  font-family: 'Poppins',sans-serif;
+  display: flex;
+  /*flex-direction: column; forma de columna mas tradicional*/
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.form-info{
+    font-family: 'Poppins',sans-serif;
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    /*box-shadow: 0 0 40px rgba(8,7,16,0.6);*/
+    padding: 50px 35px;
+}
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+footer {
+  background-color: #f1f1f1;
+  padding: 6px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 5px;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.campo-formulario {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.campo {
+  font-size: 17px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.obs {
+  height: 100px;
+  width: 500px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #38598b;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 17px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #113f67;
+  color: white;
+}
+
+.contenedorFormulario{
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+
+.formulario {
+  position: absolute;
+  top: 10%;
+  left: 120px;
+  width: 60%;
+  height: 80%;
+  background: white;
+  padding: 0 20px 0 60px; /*relleno arriba derecha abajo izquierda*/
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.campo-input{
+  /*position: relative;*/
+  margin-bottom: 35px;
+}
+.campo-input input{
+  width: 100%;
+  padding: 5px 0;
+  border: none;
+  outline: none;/*para que no marque ese cuadrado feo*/
+  border-bottom: 1px solid #777;
+}
+.campo-input-btn{
+  padding: 10px 20px;
+}
+.imagen-formulario{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+h4{
+  font-size: 14px;
+  color: #b2a0a0;
+  border: 10px;
+}
+
+/* chart.css */
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 70%;
+    width: 80%;
+}
+
+.bar {
+    height: 20px;
+    background-color: #38598b;
+    transition: width 0.5s;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.chart-label {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #fff;
+}

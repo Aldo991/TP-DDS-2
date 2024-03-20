@@ -1,0 +1,78 @@
+{{#partial "contenido"}}
+
+    <h1> Mis comunidades </h1>
+
+    <ul>
+        {{#each comunidades}}
+
+            <li> <a href = "/comunidades/:{{id}}"> {{nombre}}</a> </li>
+
+        {{/each}}
+    </ul>
+
+    {{#if otrasComunidades}}
+        <h1> Las demas Comunidades </h1>
+
+        <ul>
+            {{#each otrasComunidades}}
+                <li>
+                    {{comuId}} - {{nombre}}
+                    <ul>
+                        miembros:
+                        {{#each miembros}}
+                            <li>
+                                {{nombre }} {{apellido}}
+                                <form action="/comunidades/{{comuId}}/miembro/{{id}}" method="post">
+                                    <button>Echar</button>
+                                </form>
+                        <li>
+                        {{/each}}
+                    </ul>
+
+                    one to many
+                    <ul>{{#each incidentes}}
+                            <li>
+                                {{fechaApertura}}
+                                {{observaciones}}
+                                {{servicio}}
+                            </li>
+                        {{/each}}
+                    </ul>
+
+                    <ul>
+                        administradores:
+                        {{#each administradores}}
+                            <li>
+                                {{nombre }} {{apellido}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                </li>
+
+            {{/each}}
+        </ul>
+
+        <form action="/comunidades" method="post">
+            <label for="nombreComunidad">nombre de la comunidad</label>
+            <input type="text" name="nombreComunidad" >
+
+            <input type="submit" class="input-button" value="eliminar comunidad" />
+             <!--
+             <button ><a class="boton" href="/comunidades">eliminar comunidad</a></button>
+            -->
+        </form>
+
+    {{/if}}
+
+    <div>
+        <a href="/comunidades/nuevo"> Registrar comunidad</a>
+    </div>
+
+
+{{/partial}}
+
+{{#if usuario}}
+    {{> layout-logged-on.html.hbs }}
+{{else}}
+    {{> layout-logged-out.html.hbs}}
+{{/if}}
